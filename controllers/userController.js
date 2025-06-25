@@ -62,7 +62,7 @@ router.post('/login', async (req, res) => {
     }
 
     // 🔗 Make request to get mod_poc_id
-    const modAndPocUrl = `http://${ServiceAddress}:${ServicePort}/poc/mod_id_poc_id/${user.user_id}`;
+    const modAndPocUrl = `http://${ServiceAddress}/poc/mod_id_poc_id/${user.user_id}`;
     const modAndPocRes = await axios.get(modAndPocUrl);
     const mod_poc_id = modAndPocRes.data;
 
