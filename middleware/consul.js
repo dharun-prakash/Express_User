@@ -1,5 +1,7 @@
 const Consul = require('consul');
-const consul = new Consul();
+// const consul = new Consul();
+const consul = new Consul({host: '52.2.19.206', port:8500, secure: false , promisify: true});
+
 const dotenv = require('dotenv');
 dotenv.config();
 
